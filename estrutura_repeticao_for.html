@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>
+        Sistema de Tabuada
+    </h2>
+    Informe o valor: <input type="number" name="txtvel" id="txtvel">
+    <input type="button" value="verificar" onclick="calcular()">
+    <div id='res'> </div>
+
+    <script>
+        
+        function calcular(){
+
+            var txtv = window.document.getElementById('txtvel')
+            var res = window.document.getElementById('res')
+            var val = Number(txtv.value)
+
+            for (var c=1; c<=10 ; c++){
+                var tot = c * val
+                res.innerHTML += `<p>${c} * ${val} = ${tot} </p>`
+            }
+        }
+    </script>
+</body>
+</html>
